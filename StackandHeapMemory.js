@@ -14,6 +14,8 @@ let user = {
     email: "1@gmail.com",
     num:007
 }
+
+//nonprimitive or refference data types and here objects are ccalledusing variable.object as mentioned ".email" and ".num"
 let user2 = user
 user2.email = "tap@gmail.com"
 console.log(user.email)
