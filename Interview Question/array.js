@@ -1,3 +1,4 @@
+let person = new person("Tapas","Pattanaik")
 /* // Loop an array and display its original Properties
  //concepts
  //Array -Declaration
@@ -195,11 +196,3 @@ console.log(newfilterscore)
    console.log(person.fullName())
 
 
-   //class in javascript
-   class person
-   {
-    age = 25
-   }
-
-   //To access the property of any class we need to crete function using "new" keyword
-   let person = new person()

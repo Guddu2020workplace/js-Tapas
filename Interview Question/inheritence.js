@@ -1,0 +1,1 @@
+class pet extends person //extend keyword helps to achieve inheritance
