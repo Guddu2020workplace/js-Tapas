@@ -1,0 +1,1 @@
+//find dupicate in string
