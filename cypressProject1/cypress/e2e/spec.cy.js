@@ -12,5 +12,8 @@ describe('automation suite',()=>{
   it('test2',()=>{
     cy.visit('https://www.amazon.jobs/en/')
   })
+  it('test3',()=>{
+    cy.visit('https://www.flipkart.com/')
+  })
 
   })
