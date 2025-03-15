@@ -25,4 +25,24 @@
  
  */
 //* pr
+  let array=[2,5,10,6,8,10]
+  let newm = array.sort((a,b)=>a-b);
+  let elementcount = []
+  for(let i =0;i<newm.length;i++)
+    { 
+        for (let j = i+1;j>newm.length;j++){
+
+        
+            elementcount.push()
+
+        }
+
+  }
+
+  console.log(newm)
+
+  let mnewm = array.sort((a,b)=>b-a)
   
+  console.log(mnewm)
+
+
