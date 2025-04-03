@@ -14,7 +14,7 @@ let person = new person("Tapas","Pattanaik")
 
   //  console.log(arr[3].Ph);
    // console.log(arr.length);
-  // arr.push("Tango");//dding element from the last side of the array
+  // arr.push("Tango");//adding element from the last side of the array
    //console.log(arr);
 
    //// this starts removing the element from th last of the array
