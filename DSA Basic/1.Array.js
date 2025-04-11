@@ -29,7 +29,7 @@ console.log("Duplicate values are:", result);  // Output: [4, 6] */
 
 //practice again /*
 
-let marks= [40,50,60,70,40,50,89,90,89,99,99,49,52]
+//let marks= [40,50,60,70,40,50,89,90,89,99,99,49,52]
 /*
 function findDuplicate(arr){
     let duplicate =[]
@@ -45,7 +45,7 @@ function findDuplicate(arr){
 
 let result =findDuplicate(marks)
 console.log("Duplicate values are",result)  */
-
+/*
 
 ////Remove Duplicates from an  Array
 function removeDuplicate(arr){
@@ -59,4 +59,27 @@ function removeDuplicate(arr){
 
 }
 let result = removeDuplicate(marks)
-console.log("array after removing duplicate" + " " , result)
+console.log("array after removing duplicate" + " " , result) */
+
+
+//finding the missing number in an array
+
+//first create a function
+function missingNumber(arr,n){
+  //sort the array
+  arr.sort((a,b)=>a-b)
+
+  //Traverse through the array with simple incremental order
+
+  for(let i=0;i<arr.length;i++){
+    if(arr[i] !== i+1) {
+      return i+1;
+    }
+  }
+  return n;
+}
+const marks=[1,2,3,5,8,9,10]
+const n =10
+const result =missingNumber(marks,n)
+console.log(result)
+
