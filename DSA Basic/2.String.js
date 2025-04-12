@@ -275,9 +275,97 @@ function secondLargest(arr){
 
 let mark=[20,30,40,20,60,80]
 
-let result =secondLargest(mark)c
+let result =secondLargest(mark)
 
 console.log("Second Largest Element",result) */
 
 
 //Check if two strings are anagrams
+/*
+function isAnagram(str1,str2){
+if(str1.length!==str2.length){
+    return false //if length is not same then its not an anagram
+}
+
+const charCount={}//create a HashMap that will store the count
+
+for(let i=0;i<str1.length;i++){
+    const char=str1[i]
+    if(charCount[char]===undefined){
+        charCount[char]=1;
+    }else{
+        charCount[char]=charCount[char]+1;
+    }
+}
+
+for(let j=0;j<str2.length;j++){
+    const char = str2[j]
+    if(charCount[char]===undefined || charCount[char]===0){
+        return false
+    }else{
+        charCount[char]=charCount[char]-1
+    }
+}
+return true
+}
+let string1="listen"
+let string2="silent"
+let result = isAnagram(string1,string2)
+if(result){
+    console.log("its Anagram")
+}else{
+    console.log("Not Anagram")
+} */
+
+//10. Get the Fibonacci number at position n (recursion)
+
+/*below are the logic behinf fibonacci series
+F(0) = 0  
+F(1) = 1  
+F(n) = F(n-1) + F(n-2) for n > 1
+
+optimizeCode
+..............*/
+/*
+function fiboNicci(n,memo={}){
+    if(n<0) throw new Error("invalid input");
+    if(n===0) return 0;
+    if(n===1) return 1;
+
+    if(memo[n]) return memo[n]
+    memo= fiboNicci(n-1,memo) + fiboNicci(n-2,memo)
+    return memo[n]
+}
+let nums = 3;
+let resulto = fiboNicci(nums)
+console.log(resulto)  */
+
+
+//samecode forFibonicci using recursion
+/*
+function fiboNicci(n,memo={}){
+    if(n<0) throw new Error("invalid input");
+    if(n===0) return 0;
+    if(n===1) return 1;
+
+    if(memo[n]) return memo[n];
+    memo[n]=fiboNicci(n-1,memo) + fiboNicci(n-2,memo)
+    return memo[n]
+}
+let num =[5,4,3,2,1,0,60]
+
+//let result =fiboNicci(num) -this will work for single element not the array like num =3;
+//To print the output for all the element of array we need to run a for loop
+for(let i=0;i<num.length;i++)  {
+
+    let result =fiboNicci(num[i])
+    console.log("The result is ",result)
+}
+
+
+*/
+
+//find the non-repeating character in a string
+function nonRepeatingchar(str){
+    
+}
