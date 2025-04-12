@@ -191,8 +191,8 @@ let result = notVowel(name)
 //console.log("consonant",result) */
 
 
-//Sum all numbers in an array
-
+//Sum all numbers in an array /*
+/*
 function sumAllNumber(arr){
     let sum=0 
     for(let i=0;i<arr.length;i++){
@@ -202,8 +202,82 @@ function sumAllNumber(arr){
 }
 let marks1=[20,30,40,60,80,90]
 let result2= sumAllNumber(marks1)
-console.log("sum of elements in array",result2)
+console.log("sum of elements in array",result2) */
+
+//Remove dupicate from an array
+/*
+function removeDuplicate(arr){
+    let uniqueArr=[]
+    for(let i=0;i<arr.length;i++){
+        if(!uniqueArr.includes(arr[i])){
+            uniqueArr.push(arr[i])
+
+        }
+    }
+    return uniqueArr
+}
+let marks = [20,40,50,60,40,20,80,30,]
+
+let result = removeDuplicate(marks)
+
+console.log("Unique arr = ",result) */
+
+//find the second largest number in an array
+/*
+function secondLargest(arr){
+    if(arr.length<2) return null; //because to find the second largest element in an arayy.rray  should be having atleast two elements to compare 
+    let max = -Infinity
+    let secondMax = -Infinity
+
+    for(let i=0;i<arr.length;i++){
+        let num = arr[i];
+
+       
+        if(num>max){
+         secondMax = max //for iteration1 ,secondMax= -infinity
+         max = num       //for iteration1(i.e i =0),max =10
+        }
+        else if(num>secondMax && num!==max){  //this will enter to else block when arr[i] <arr[j]
+            secondMax = num;
+        }
+    }
+        if(secondMax===-Infinity){   //this will check for wen second element = -Infinity
+            return null
+        }
+        return secondMax
+}
+let marks = [80,60,30,80,90]
+let result =secondLargest(marks)
+console.log("The second largest element is",result)  */
 
 
+// finding 2ndLargest element in an array 
+/*
+function secondLargest(arr){
+    let max=-Infinity
+    let secondMax=-Infinity
+    for(let i=0;i<arr.length;i++){
+        let num =arr[i]
+        if(num>max){
+            secondMax=max;
+            max=num;
+        }
+        else if(num>secondMax && num!==max){
+            secondMax=num
+        }
+        
+    }
+    if(secondMax===-Infinity){
+        return null;
+    }
+    return secondMax;
+}
+
+let mark=[20,30,40,20,60,80]
+
+let result =secondLargest(mark)c
+
+console.log("Second Largest Element",result) */
 
 
+//Check if two strings are anagrams
