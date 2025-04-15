@@ -1,4 +1,5 @@
-/* Arrays and Strings
+   /*
+   /* Arrays and Strings
 
 Hashing (Maps, Sets)
 
@@ -366,6 +367,173 @@ for(let i=0;i<num.length;i++)  {
 */
 
 //find the non-repeating character in a string
+
+/*first count the frequency of the character
+>Then loop through the string again and find the charcter that has frequency =1
+>if found the charchter then return it or if no nonrepeating charcter found then return null*/
+/*
 function nonRepeatingchar(str){
-    
+    const freq =new Map()
+    //count frquency of each charater
+    for(let i =0;i<str.length;i++){
+        const ch=str[i]
+        freq.set(ch, (freq.get(ch)|| 0) + 1)
+    }
+    //secondly,find the charachter whose frequency =1
+    for(let i =0;i<str.length;i++){
+        const ch=str[i]
+        if(freq.get(ch)===1){
+            return ch
+        }
+    }
+  return -1 //if all charcters are repetative
 }
+let name ="TapasPattanaik".toLowerCase()
+let result =nonRepeatingchar(name)
+//console.log("Non repeatative charachters are",result)
+
+
+
+// finding the non-repetitive caharacter in a string using javascript
+
+
+function firstnonRepeativechar(str){ //create a function
+
+    let count ={} //create a object that will strore the character count
+
+    //loop through the string
+    for(let i=0;i<str.length;i++){
+        let ch = str[i]; //declare ch to store the array of string
+
+        if(count[ch]){ //count the frequency of each character
+            count[ch] = count[ch] + 1;
+        }else {
+            count[ch]=1
+        }
+
+    }
+
+    //loop through the string again and find the first character which has the count =1
+    for(let i=0;i<str.length;i++){
+        let ch = str[i]
+        if(count[ch]===1){
+            return ch;
+        }
+    }
+    return -1
+}
+
+let city = "Rayagada".toLowerCase()
+let city1result = firstnonRepeativechar(city)
+//console.log("firstNonrepeative char is",city1result) */
+
+// Move all zeros to the end of an array
+/*
+function moveAllzerotoend(arr){
+
+    let nonZeroIndex = 0;
+
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]!==0){
+            arr[nonZeroIndex]=arr[i];//move the nonzero element to Non-zero Index
+            nonZeroIndex ++; //increase the nonzero index count
+            
+        }
+
+    }
+//fill the remaining position with zeros
+/*
+while(nonZeroIndex<arr.length){
+    arr[nonZeroIndex]=0;
+    nonZeroIndex++
+}
+return arr;
+
+}
+
+let array =[20,0,30,-9,0,5,0,-1,0,0,2]
+let result0=moveAllzerotoend(array)
+console.log("all zero had moved to the end",result0) */
+
+
+
+    //Find intersection of two array
+//playing around set
+// 
+ /*
+let mySet = new  Set([20,30,40,40,50,60]) ;
+console.log(mySet);   */
+
+
+//WILL ADD PROGRAM FOR SET RELATED THINGS 
+
+
+/* find the highest non repeating charcter //Use of hashmap
+
+"bbbbbbbbbbbbbbccccdddeeeeffffggggg"
+
+we need to find the highest non repeating character, 
+we have to declare three things
+>one is empty object which is a hasmap that will store the charcter count as how much time it appeared
+>empty array for storing the most frequent char
+>highest count =0
+
+let map ={}
+for(){
+if(map(char[tem]
+
+
+/*
+function dupArray(arr){
+    let dup =[]
+    for(let i=0;i<arr.length;i++){
+    for(let j=i+1 ;j<arr.length;j++){
+        if(arr[i]===arr[j]){
+            dup.push(arr[i])
+        }
+    }
+    }
+    return dup
+}
+let marks =[20,40,60,80,-20,30,30,40]
+
+let result = dupArray(marks)
+console.log(result)
+*/
+//findind duplicate of an array using hashmap
+function dupArr(arr){
+    let freqCount ={} //this will store the frequency count of each element of  array
+    let dupArr =[]//this will store the duolicate element in a new array so declared an empty array
+
+    for(let i=0;i<arr.length;i++){ //This will traverse through the array
+        const  char  =arr[i] //for better readbility we stored arr[i] into a constant variable that is "char "
+        if(freqCount[char]){ //if the element is already present then increment the count by +1
+            freqCount[char]++;
+        }else{
+            freqCount[char]= 1;//if element is not present then set frequency count = 1
+        }
+    }
+
+//now we have to write the logic if frqeuncy count >1 then push the element to the duplicate element
+   
+for(let i=0;i<arr.length;i++){
+    let char = arr[i]
+    if(freqCount[char]>1 && !dupArr.includes(char) ){
+        dupArr.push(char)
+    }
+}
+
+/* instead of typlical for loop we can include the for in 
+for(const key in freqCount){
+    if(freqCount[key]>1){
+    
+        dupArr.push(Number(key))
+    }
+}*/
+return dupArr
+}
+
+let mymarks=[70,80,40,60,70,31,80]
+
+let myResult = dupArr(mymarks)
+console.log(myResult)
