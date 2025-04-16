@@ -43,7 +43,7 @@ function findDuplicate(arr){
     return duplicate
 }
 
-let result =findDuplicate(marks)
+let result1 =findDuplicate(marks)
 console.log("Duplicate values are",result)  */
 /*
 

@@ -483,11 +483,11 @@ for(){
 if(map(char[tem]
 
 
-/*
+/* Find Duplicate element from an array , //outer loop starts with index 0;let i =0;
 function dupArray(arr){
     let dup =[]
-    for(let i=0;i<arr.length;i++){
-    for(let j=i+1 ;j<arr.length;j++){
+    for(let i=0;i<arr.length;i++){ //outer loop starts with index 0
+    for(let j=i+1 ;j<arr.length;j++){//inner loop starts with index 1
         if(arr[i]===arr[j]){
             dup.push(arr[i])
         }
@@ -537,3 +537,8 @@ let mymarks=[70,80,40,60,70,31,80]
 
 let myResult = dupArr(mymarks)
 console.log(myResult)
+
+//  
+
+ 0   1  2  3  4 5  6
+[20,30,60,20,80,90,30]
